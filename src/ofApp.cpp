@@ -13,11 +13,26 @@ X = {500, 1000, 30, 100, 300, 200, 750, 380 };// set of x-coordinates for jewel
 Y = {630, 400, 900,40, 200, 0, 90, 30}; //set of y-coordinates for jewel
 */
 
+
+/*
 jewel.load("diamond.png");
 std::random_device rd;
 std::mt19937 gen(rd());
 std::uniform_int_distribution<> dis(0,1200);
 std::uniform_int_distribution<> dis2(0,970);
+
+
+for(int x=0; x<20; x++){
+	X.push_back(dis(gen));
+	Y.push_back(dis2(gen));
+}
+*/
+
+jewel.load("diamond.png");
+std::random_device rd;
+std::mt19937 gen(rd());
+std::normal_distribution<> dis(1000,15);
+std::normal_distribution<> dis2(800,15);
 
 
 for(int x=0; x<20; x++){
